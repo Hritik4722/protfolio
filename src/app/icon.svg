@@ -1,0 +1,8 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shadow -->
+  <rect x="64" y="64" width="384" height="384" fill="#000000" />
+  <!-- Main Box -->
+  <rect x="32" y="32" width="384" height="384" fill="#FACC15" stroke="#000000" stroke-width="32" />
+  <!-- H letter -->
+  <path d="M 160 128 L 160 320 M 288 128 L 288 320 M 160 224 L 288 224" stroke="#000000" stroke-width="48" stroke-linecap="square" />
+</svg>
