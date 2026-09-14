@@ -133,6 +133,20 @@
       mousePosX = event.clientX;
       mousePosY = event.clientY;
     });
+
+    document.addEventListener("touchstart", function (event) {
+      if (event.touches.length > 0) {
+        mousePosX = event.touches[0].clientX;
+        mousePosY = event.touches[0].clientY;
+      }
+    });
+
+    document.addEventListener("touchmove", function (event) {
+      if (event.touches.length > 0) {
+        mousePosX = event.touches[0].clientX;
+        mousePosY = event.touches[0].clientY;
+      }
+    });
     
     if (persistPosition) {
       window.addEventListener("beforeunload", function (event) {
