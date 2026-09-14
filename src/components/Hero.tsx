@@ -43,10 +43,22 @@ export default function Hero() {
       <h1 className="font-mono text-4xl md:text-6xl font-bold tracking-tight mb-6">
         Hritik Yadav
       </h1>
-      <p className="font-sans text-lg md:text-xl text-gray-700 max-w-2xl mb-10 leading-relaxed">
-        Python backend + AI/LLM engineer - FastAPI, Celery, and multi-agent
+      <p className="font-sans text-lg md:text-xl text-gray-700 max-w-2xl mb-8 leading-relaxed">
+        Python backend + AI/LLM engineer — FastAPI, Celery, and multi-agent
         pipelines that actually run in production.
       </p>
+
+      {/* Live Status Indicator */}
+      <div className="inline-flex items-center gap-3 px-4 py-2 border-3 border-black bg-white font-mono text-xs md:text-sm font-bold shadow-[4px_4px_0_#000] mb-10">
+        <span className="relative flex h-3 w-3">
+          <span className="animate-ping absolute inline-flex h-full w-full bg-green-400 opacity-75"></span>
+          <span className="relative inline-flex h-3 w-3 bg-green-500 border-2 border-black"></span>
+        </span>
+        <span className="uppercase tracking-tight">
+          Currently building: LLM Gateway from scratch (no litellm)
+        </span>
+      </div>
+
       <div className="flex flex-wrap gap-3">
         {socials.map((social) => (
           <a

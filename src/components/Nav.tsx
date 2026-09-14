@@ -5,12 +5,22 @@ export default function Nav() {
         <a href="#" className="font-mono text-xl font-bold tracking-tight">
           hritik.online
         </a>
-        <a
-          href="#"
-          className="font-mono text-sm font-bold px-5 py-2.5 bg-accent text-black border-2 border-black shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
-        >
-          Resume
-        </a>
+        <div className="flex items-center gap-3 md:gap-4">
+          <a
+            href="mailto:yadavhritik158@gmail.com"
+            className="font-mono text-sm font-bold px-4 py-2 bg-white text-black border-2 border-black shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150"
+          >
+            Email
+          </a>
+          <a
+            href="/resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-sm font-bold px-4 py-2 bg-accent text-black border-2 border-black shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150"
+          >
+            Resume
+          </a>
+        </div>
       </div>
     </nav>
   );
