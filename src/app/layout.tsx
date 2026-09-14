@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -64,7 +65,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+          {children}
+          <Script
+            src="https://cdn.jsdelivr.net/gh/adryd325/oneko.js@14bab88/oneko.js"
+            strategy="afterInteractive"
+          />
+        </body>
     </html>
   );
 }
