@@ -1,23 +1,54 @@
+import { FaJava, FaPython, FaDatabase, FaRobot, FaHtml5, FaCss3Alt, FaReact, FaGithub, FaDocker, FaLinux, FaRoute } from 'react-icons/fa';
+import { SiFastapi, SiJavascript, SiPostgresql, SiMongodb, SiRedis, SiCloudflare, SiGooglegemini, SiTailwindcss } from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
+import { TbApi } from 'react-icons/tb';
+
 const skillCategories = [
   {
     category: "Programming & Frameworks",
-    skills: ["Java", "Python", "FastAPI", "JavaScript"],
+    skills: [
+      { name: "Java", icon: <FaJava /> },
+      { name: "Python", icon: <FaPython /> },
+      { name: "FastAPI", icon: <SiFastapi /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+    ],
   },
   {
     category: "Databases & Storage",
-    skills: ["PostgreSQL", "SQL", "MongoDB", "Redis", "Cloudflare R2"],
+    skills: [
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "SQL", icon: <FaDatabase /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Redis", icon: <SiRedis /> },
+      { name: "Cloudflare R2", icon: <SiCloudflare /> },
+    ],
   },
   {
     category: "AI / LLM Integrations",
-    skills: ["AI Agent Development", "LLM APIs", "Gemini", "OpenRouter"],
+    skills: [
+      { name: "AI Agent Development", icon: <FaRobot /> },
+      { name: "LLM APIs", icon: <TbApi /> },
+      { name: "Gemini", icon: <SiGooglegemini /> },
+      { name: "OpenRouter", icon: <FaRoute /> },
+    ],
   },
   {
     category: "Web Technologies",
-    skills: ["HTML", "CSS", "Tailwind", "ReactJs"],
+    skills: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "ReactJs", icon: <FaReact /> },
+    ],
   },
   {
     category: "Tools & Platforms",
-    skills: ["Git & GitHub", "Docker", "VS Code", "Linux"],
+    skills: [
+      { name: "Git & GitHub", icon: <FaGithub /> },
+      { name: "Docker", icon: <FaDocker /> },
+      { name: "VS Code", icon: <VscVscode /> },
+      { name: "Linux", icon: <FaLinux /> },
+    ],
   },
 ];
 
@@ -40,10 +71,11 @@ export default function Skills() {
               <div className="flex flex-wrap gap-3 md:gap-4">
                 {group.skills.map((skill) => (
                   <span
-                    key={skill}
-                    className="inline-block px-4 py-2 border-3 border-black bg-white font-mono text-sm font-bold shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] hover:bg-accent transition-all cursor-default"
+                    key={skill.name}
+                    className="inline-flex items-center gap-2 px-4 py-2 border-3 border-black bg-white font-mono text-sm font-bold shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] hover:bg-accent transition-all cursor-default"
                   >
-                    {skill}
+                    <span className="text-base md:text-lg">{skill.icon}</span>
+                    {skill.name}
                   </span>
                 ))}
               </div>
