@@ -38,9 +38,9 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
   });
 
   return (
-    <div className="border-3 border-black bg-white p-6 shadow-[4px_4px_0_#000] relative">
-      <div className="flex items-center justify-between mb-4">
-        <p className="font-mono text-sm text-gray-600">
+    <div className="border-3 border-black bg-white p-4 sm:p-6 shadow-[4px_4px_0_#000] relative max-w-full">
+      <div className="flex flex-wrap items-center justify-between mb-4 gap-2">
+        <p className="font-mono text-xs sm:text-sm text-gray-600">
           {totalContributions} contributions in the last year
         </p>
       </div>
@@ -107,21 +107,21 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
       </div>
 
       {/* Legend */}
-      <div className="flex items-center justify-between mt-4">
+      <div className="flex flex-wrap items-center justify-between mt-4 gap-3">
         <a
           href={`https://github.com/${username}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-sm font-bold hover:text-accent transition-colors"
+          className="font-mono text-xs sm:text-sm font-bold hover:text-accent transition-colors"
         >
           @{username} →
         </a>
         <div className="flex items-center gap-1">
-          <span className="font-mono text-xs text-gray-500 mr-1">Less</span>
+          <span className="font-mono text-[10px] sm:text-xs text-gray-500 mr-1">Less</span>
           {LEVEL_COLORS.map((color, i) => (
-            <div key={i} className={`w-[11px] h-[11px] ${color} border border-black/10`} />
+            <div key={i} className={`w-[9px] h-[9px] sm:w-[11px] sm:h-[11px] ${color} border border-black/10`} />
           ))}
-          <span className="font-mono text-xs text-gray-500 ml-1">More</span>
+          <span className="font-mono text-[10px] sm:text-xs text-gray-500 ml-1">More</span>
         </div>
       </div>
 

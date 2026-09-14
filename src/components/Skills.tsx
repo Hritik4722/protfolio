@@ -54,8 +54,8 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-6xl mx-auto px-6 py-10 md:py-16">
-      <h2 className="font-mono text-2xl md:text-3xl font-bold mb-10">
+    <section id="skills" className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+      <h2 className="font-mono text-2xl md:text-3xl font-bold mb-6 sm:mb-10">
         {"//"} skills
       </h2>
       <div className="border-3 border-black bg-white p-4 md:p-8 shadow-[4px_4px_0_#000]">
