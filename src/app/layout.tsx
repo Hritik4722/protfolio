@@ -68,7 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
           {children}
           <Script
-            src="https://cdn.jsdelivr.net/gh/adryd325/oneko.js@14bab88/oneko.js"
+            src="/oneko.js"
             strategy="afterInteractive"
           />
         </body>
