@@ -21,10 +21,6 @@
   let idleAnimation = null;
   let idleAnimationFrame = 0;
 
-  let isMobile = false;
-  let lastTouchTime = 0;
-  const wanderPauseFrames = 100; // ~10s minimum pause at each spot
-
   const nekoSpeed = 10;
   const spriteSets = {
     idle: [[-3, -3]],
@@ -137,22 +133,6 @@
       mousePosX = event.clientX;
       mousePosY = event.clientY;
     });
-
-    // Mobile: detect touch devices and add tap-to-target + auto-wander
-    isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-    if (isMobile) {
-      document.addEventListener("touchstart", function (event) {
-        const touch = event.touches[0];
-        mousePosX = touch.clientX;
-        mousePosY = touch.clientY;
-        lastTouchTime = Date.now();
-      });
-
-      // Give the cat an initial random target so it starts wandering
-      mousePosX = Math.random() * (window.innerWidth - 64) + 32;
-      mousePosY = Math.random() * (window.innerHeight - 64) + 32;
-    }
     
     if (persistPosition) {
       window.addEventListener("beforeunload", function (event) {
@@ -202,22 +182,6 @@
 
   function idle() {
     idleTime += 1;
-
-    // Mobile: force the cat to sleep when it stops (instead of just standing)
-    if (isMobile && idleTime === 2 && idleAnimation == null && Date.now() - lastTouchTime > 3000) {
-      idleAnimation = "sleeping";
-      idleAnimationFrame = 0;
-    }
-
-    // Mobile: after sleeping for a while, pick a new random spot to wander to
-    // Math.random() < 0.02 adds extra randomness so the cat lingers ~10-15s total
-    if (isMobile && idleTime > wanderPauseFrames && Date.now() - lastTouchTime > 4000 && Math.random() < 0.02) {
-      mousePosX = Math.random() * (window.innerWidth - 64) + 32;
-      mousePosY = Math.random() * (window.innerHeight - 64) + 32;
-      idleTime = 0;
-      resetIdleAnimation();
-      return;
-    }
 
     // every ~ 20 seconds
     if (
