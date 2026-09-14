@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 import GitHubStats from "@/components/GitHubStats";
 import Projects from "@/components/Projects";
 import LaunchedProducts from "@/components/LaunchedProducts";
@@ -11,6 +12,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Skills />
         <GitHubStats />
         <Projects />
         <LaunchedProducts />
