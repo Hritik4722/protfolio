@@ -91,8 +91,8 @@ export default async function GitHubStats() {
   const data = await fetchGitHubContributions(username);
 
   return (
-    <section id="github" className="max-w-6xl mx-auto px-6 py-20">
-      <h2 className="font-mono text-2xl md:text-3xl font-bold mb-10">{"//"} github</h2>
+    <section id="github" className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-20">
+      <h2 className="font-mono text-2xl md:text-3xl font-bold mb-6 md:mb-10">{"//"} github</h2>
       
       {data && data.weeks.length > 0 ? (
         <GitHubHeatmap 
@@ -101,7 +101,7 @@ export default async function GitHubStats() {
           username={username} 
         />
       ) : (
-        <div className="border-3 border-black bg-white p-6 shadow-[4px_4px_0_#000] relative flex flex-col items-center text-center">
+        <div className="border-2 md:border-3 border-black bg-white p-4 md:p-6 shadow-[2px_2px_0_#000] md:shadow-[4px_4px_0_#000] relative flex flex-col items-center text-center">
           <p className="font-mono text-gray-600 mb-2">Could not load contribution data for @{username}.</p>
           <p className="font-sans text-sm text-gray-500 max-w-md">
             Please check the console or ensure the GitHub username is correct.
