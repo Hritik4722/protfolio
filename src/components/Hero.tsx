@@ -43,9 +43,9 @@ export default function Hero() {
       <h1 className="font-mono text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-4 sm:mb-6">
         Hritik Yadav
       </h1>
-      <p className="font-sans text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-        Python backend + AI/LLM engineer - FastAPI, Celery, and multi-agent
-        pipelines that actually run in production.
+      <p className="font-sans text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+        I build backend systems, AI tools, and things I find worth building.
+Mostly interested in systems, automation, and turning interesting ideas into working software.
       </p>
 
       {/* Live Status Indicator */}
