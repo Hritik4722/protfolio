@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     description:
       "Python backend + AI/LLM engineer building FastAPI, Celery, and production-ready multi-agent pipelines.",
     siteName: "Hritik Yadav Portfolio",
+    images: [
+      {
+        url: "/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hritik Yadav Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -35,6 +43,7 @@ export const metadata: Metadata = {
     description:
       "Python backend + AI/LLM engineer building FastAPI, Celery, and production-ready multi-agent pipelines.",
     creator: "@Hritik_Yadav_1",
+    images: ["/og_image.png"],
   },
   robots: {
     index: true,
