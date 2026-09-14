@@ -44,7 +44,7 @@ export default function Hero() {
         Hritik Yadav
       </h1>
       <p className="font-sans text-lg md:text-xl text-gray-700 max-w-2xl mb-10 leading-relaxed">
-        Python backend + AI/LLM engineer — FastAPI, Celery, and multi-agent
+        Python backend + AI/LLM engineer - FastAPI, Celery, and multi-agent
         pipelines that actually run in production.
       </p>
       <div className="flex flex-wrap gap-3">
