@@ -24,7 +24,7 @@ export default function ThemePicker() {
   }
 
   return (
-    <div className="flex items-center gap-2 sm:gap-3 mr-2 sm:mr-4">
+    <div className="flex items-center gap-2 sm:gap-3">
       {themes.map((t) => (
         <button
           key={t.name}
