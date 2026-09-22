@@ -58,12 +58,12 @@ export default function Skills() {
       <h2 className="font-mono text-2xl md:text-3xl font-bold mb-6 sm:mb-10">
         {"//"} skills
       </h2>
-      <div className="border-3 border-black bg-white p-4 md:p-8 shadow-[4px_4px_0_#000]">
+      <div className="border-3 border-border-brutal bg-surface p-4 md:p-8 shadow-[4px_4px_0_var(--shadow-color)]">
         <div className="flex flex-col gap-6">
           {skillCategories.map((group) => (
             <div
               key={group.category}
-              className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6 border-l-4 md:border-l-[6px] border-black pl-3 md:pl-5"
+              className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6 border-l-4 md:border-l-[6px] border-border-brutal pl-3 md:pl-5"
             >
               <h3 className="font-mono font-bold text-xs md:text-sm w-full md:w-48 shrink-0 pt-1 md:pt-2 leading-snug">
                 {group.category}
@@ -72,7 +72,7 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill.name}
-                    className="inline-flex items-center gap-1.5 md:gap-2 px-2.5 py-1 md:px-4 md:py-2 border-2 md:border-3 border-black bg-white font-mono text-[11px] md:text-sm font-bold shadow-[2px_2px_0_#000] md:shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] hover:bg-accent transition-all cursor-default"
+                    className="inline-flex items-center gap-1.5 md:gap-2 px-2.5 py-1 md:px-4 md:py-2 border-2 md:border-3 border-border-brutal bg-surface font-mono text-[11px] md:text-sm font-bold shadow-[2px_2px_0_var(--shadow-color)] md:shadow-[4px_4px_0_var(--shadow-color)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] md:hover:translate-x-[4px] md:hover:translate-y-[4px] hover:bg-accent transition-all cursor-default"
                   >
                     <span className="text-sm md:text-lg">{skill.icon}</span>
                     {skill.name}

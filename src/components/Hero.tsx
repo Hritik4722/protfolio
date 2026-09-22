@@ -43,16 +43,16 @@ export default function Hero() {
       <h1 className="font-mono text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-4 sm:mb-6">
         Hritik Yadav
       </h1>
-      <p className="font-sans text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+      <p className="font-sans text-base sm:text-lg md:text-xl text-muted max-w-2xl mb-6 sm:mb-8 leading-relaxed">
         I build backend systems, AI tools, and things I find worth building.
 Mostly interested in systems, automation, and turning interesting ideas into working software.
       </p>
 
       {/* Live Status Indicator */}
-      <div className="inline-flex items-start sm:items-center gap-3 px-3 sm:px-4 py-2 border-3 border-black bg-white font-mono text-xs md:text-sm font-bold shadow-[4px_4px_0_#000] mb-8 sm:mb-10">
+      <div className="inline-flex items-start sm:items-center gap-3 px-3 sm:px-4 py-2 border-3 border-border-brutal bg-surface font-mono text-xs md:text-sm font-bold shadow-[4px_4px_0_var(--shadow-color)] mb-8 sm:mb-10">
         <span className="relative flex h-3 w-3 shrink-0 mt-0.5 sm:mt-0">
           <span className="animate-ping absolute inline-flex h-full w-full bg-green-400 opacity-75"></span>
-          <span className="relative inline-flex h-3 w-3 bg-green-500 border-2 border-black"></span>
+          <span className="relative inline-flex h-3 w-3 bg-green-500 border-2 border-border-brutal"></span>
         </span>
         <span className="uppercase tracking-tight">
           Currently building: LLM Gateway from scratch (no litellm)
@@ -66,7 +66,7 @@ Mostly interested in systems, automation, and turning interesting ideas into wor
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-mono text-sm font-bold px-3 py-2 sm:px-4 sm:py-2.5 bg-accent text-black border-2 border-black shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
+            className="inline-flex items-center gap-2 font-mono text-sm font-bold px-3 py-2 sm:px-4 sm:py-2.5 bg-accent text-black border-2 border-border-brutal shadow-[4px_4px_0_var(--shadow-color)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
           >
             {social.icon}
             {social.name}

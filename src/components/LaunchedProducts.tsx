@@ -42,15 +42,15 @@ export default function LaunchedProducts() {
             href={product.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-3 border-black bg-white p-4 sm:p-6 shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 flex flex-col border-l-[6px] border-l-accent"
+            className="border-3 border-border-brutal bg-surface p-4 sm:p-6 shadow-[4px_4px_0_var(--shadow-color)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 flex flex-col border-l-[6px] border-l-accent"
           >
             <div className="flex items-center justify-between mb-3">
               <h3 className="font-mono text-lg font-bold">{product.name}</h3>
-              <span className="font-mono text-xs font-bold px-2 py-1 bg-accent border border-black">
+              <span className="font-mono text-xs font-bold px-2 py-1 bg-accent text-black border border-border-brutal">
                 {product.platform}
               </span>
             </div>
-            <p className="font-sans text-gray-700 text-sm mb-4 flex-1">
+            <p className="font-sans text-muted text-sm mb-4 flex-1">
               {product.description}
             </p>
             <span className="font-mono text-sm font-bold inline-flex items-center gap-1">

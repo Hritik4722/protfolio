@@ -101,9 +101,9 @@ export default async function GitHubStats() {
           username={username} 
         />
       ) : (
-        <div className="border-3 border-black bg-white p-6 shadow-[4px_4px_0_#000] relative flex flex-col items-center text-center">
-          <p className="font-mono text-gray-600 mb-2">Could not load contribution data for @{username}.</p>
-          <p className="font-sans text-sm text-gray-500 max-w-md">
+        <div className="border-3 border-border-brutal bg-surface p-6 shadow-[4px_4px_0_var(--shadow-color)] relative flex flex-col items-center text-center">
+          <p className="font-mono text-muted mb-2">Could not load contribution data for @{username}.</p>
+          <p className="font-sans text-sm text-muted max-w-md">
             Please check the console or ensure the GitHub username is correct.
           </p>
         </div>

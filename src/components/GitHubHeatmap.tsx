@@ -10,14 +10,6 @@ export type Day = {
 
 export type Week = Day[];
 
-const LEVEL_COLORS = [
-  'bg-gray-100',        // 0
-  'bg-yellow-200',      // 1  
-  'bg-yellow-300',      // 2
-  'bg-yellow-400',      // 3
-  'bg-accent',          // 4 (this maps to #FACC15)
-];
-
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export default function GitHubHeatmap({ weeks, totalContributions, username }: { weeks: Week[]; totalContributions: string; username: string }) {
@@ -38,9 +30,9 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
   });
 
   return (
-    <div className="border-3 border-black bg-white p-4 sm:p-6 shadow-[4px_4px_0_#000] relative max-w-full">
+    <div className="border-3 border-border-brutal bg-surface p-4 sm:p-6 shadow-[4px_4px_0_var(--shadow-color)] relative max-w-full">
       <div className="flex flex-wrap items-center justify-between mb-4 gap-2">
-        <p className="font-mono text-xs sm:text-sm text-gray-600">
+        <p className="font-mono text-xs sm:text-sm text-muted">
           {totalContributions} contributions in the last year
         </p>
       </div>
@@ -56,7 +48,7 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
               {monthLabels.map((m, i) => (
                 <span
                   key={i}
-                  className="absolute font-mono text-[10px] text-gray-500"
+                  className="absolute font-mono text-[10px] text-muted"
                   style={{ left: `${(m.col / weeks.length) * 100}%` }}
                 >
                   {m.label}
@@ -71,7 +63,7 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
             <div className="flex flex-col gap-[2px] md:gap-[3px] w-8 shrink-0">
               {['', 'Mon', '', 'Wed', '', 'Fri', ''].map((label, i) => (
                 <div key={i} className="flex-1 flex items-center justify-end pr-2">
-                  <span className="font-mono text-[10px] leading-none text-gray-500">{label}</span>
+                  <span className="font-mono text-[10px] leading-none text-muted">{label}</span>
                 </div>
               ))}
             </div>
@@ -83,10 +75,13 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
                   <div
                     key={dayIdx}
                     className={`w-full aspect-square ${
-                      day.level === -1
-                        ? 'bg-transparent'
-                        : LEVEL_COLORS[day.level]
-                    } ${day.level >= 0 ? 'border border-black/10' : ''}`}
+                      day.level === -1 ? 'bg-transparent' : ''
+                    } ${day.level >= 0 ? 'border border-border-brutal/20' : ''}`}
+                    style={
+                      day.level >= 0
+                        ? { backgroundColor: `var(--heat-${day.level})` }
+                        : {}
+                    }
                     onMouseEnter={(e) => {
                       if (day.date) {
                         const rect = e.currentTarget.getBoundingClientRect();
@@ -117,18 +112,18 @@ export default function GitHubHeatmap({ weeks, totalContributions, username }: {
           @{username} →
         </a>
         <div className="flex items-center gap-1">
-          <span className="font-mono text-[10px] sm:text-xs text-gray-500 mr-1">Less</span>
-          {LEVEL_COLORS.map((color, i) => (
-            <div key={i} className={`w-[9px] h-[9px] sm:w-[11px] sm:h-[11px] ${color} border border-black/10`} />
+          <span className="font-mono text-[10px] sm:text-xs text-muted mr-1">Less</span>
+          { [0, 1, 2, 3, 4].map((level) => (
+            <div key={level} className="w-[9px] h-[9px] sm:w-[11px] sm:h-[11px] border border-border-brutal/20" style={{ backgroundColor: `var(--heat-${level})` }} />
           ))}
-          <span className="font-mono text-[10px] sm:text-xs text-gray-500 ml-1">More</span>
+          <span className="font-mono text-[10px] sm:text-xs text-muted ml-1">More</span>
         </div>
       </div>
 
       {/* Tooltip */}
       {tooltip && (
         <div
-          className="fixed z-50 bg-black text-white font-mono text-xs px-2 py-1 pointer-events-none -translate-x-1/2 -translate-y-full whitespace-nowrap"
+          className="fixed z-50 bg-foreground text-background font-mono text-xs px-2 py-1 pointer-events-none -translate-x-1/2 -translate-y-full whitespace-nowrap"
           style={{ left: tooltip.x, top: tooltip.y }}
         >
           {tooltip.text}

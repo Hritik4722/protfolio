@@ -1,15 +1,99 @@
 @import "tailwindcss";
 
-:root {
+:root, .light {
   --background: #ffffff;
   --foreground: #0a0a0a;
   --accent: #FACC15;
+  --surface: #ffffff;
+  --border-color: #000000;
+  --muted: #6b7280;
+  --shadow-color: #000000;
+  --tag-bg: #f3f4f6;
+
+  --heat-0: #f3f4f6;
+  --heat-1: #fef08a;
+  --heat-2: #fde047;
+  --heat-3: #facc15;
+  --heat-4: var(--accent);
+}
+
+.slate {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --accent: #a3e635;
+  --surface: #0f172a;
+  --border-color: #cbd5e1;
+  --muted: #94a3b8;
+  --shadow-color: #a3e635;
+  --tag-bg: #1e293b;
+
+  --heat-0: #1e293b;
+  --heat-1: #166534;
+  --heat-2: #15803d;
+  --heat-3: #22c55e;
+  --heat-4: var(--accent);
+}
+
+.midnight {
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #06b6d4;
+  --surface: #0a0a0a;
+  --border-color: #e5e7eb;
+  --muted: #9ca3af;
+  --shadow-color: #06b6d4;
+  --tag-bg: #171717;
+
+  --heat-0: #171717;
+  --heat-1: #164e63;
+  --heat-2: #0891b2;
+  --heat-3: #06b6d4;
+  --heat-4: var(--accent);
+}
+
+.obsidian {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --accent: #f97316;
+  --surface: #18181b;
+  --border-color: #e4e4e7;
+  --muted: #a1a1aa;
+  --shadow-color: #f97316;
+  --tag-bg: #27272a;
+
+  --heat-0: #27272a;
+  --heat-1: #7c2d12;
+  --heat-2: #c2410c;
+  --heat-3: #ea580c;
+  --heat-4: var(--accent);
+}
+
+.bubblegum {
+  --background: #2e1065;
+  --foreground: #fdf2f8;
+  --accent: #f472b6;
+  --surface: #3b0764;
+  --border-color: #fbcfe8;
+  --muted: #d8b4fe;
+  --shadow-color: #f472b6;
+  --tag-bg: #581c87;
+
+  --heat-0: #581c87;
+  --heat-1: #831843;
+  --heat-2: #be185d;
+  --heat-3: #db2777;
+  --heat-4: var(--accent);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-border-brutal: var(--border-color);
+  --color-muted: var(--muted);
+  --color-shadow-brutal: var(--shadow-color);
+  --color-tag-bg: var(--tag-bg);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }

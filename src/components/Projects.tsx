@@ -45,17 +45,17 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className="border-3 border-black bg-white p-4 sm:p-6 shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 flex flex-col"
+            className="border-3 border-border-brutal bg-surface p-4 sm:p-6 shadow-[4px_4px_0_var(--shadow-color)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 flex flex-col"
           >
             <h3 className="font-mono text-lg font-bold mb-2">{project.name}</h3>
-            <p className="font-sans text-gray-700 text-sm mb-4 flex-1">
+            <p className="font-sans text-muted text-sm mb-4 flex-1">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="font-mono text-[10px] sm:text-xs px-2 py-1 bg-gray-100 border border-black/20"
+                  className="font-mono text-[10px] sm:text-xs px-2 py-1 bg-tag-bg border border-border-brutal/30"
                 >
                   {tech}
                 </span>
