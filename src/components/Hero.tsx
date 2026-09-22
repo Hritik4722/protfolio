@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32">
-      <h1 className="font-mono text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-4 sm:mb-6">
+      <h1 className="font-pixel text-3xl sm:text-4xl md:text-5xl tracking-[-3px] sm:tracking-[-4px] md:tracking-[-5px] mb-4 sm:mb-6 mt-4">
         Hritik Yadav
       </h1>
       <p className="font-sans text-base sm:text-lg md:text-xl text-muted max-w-2xl mb-6 sm:mb-8 leading-relaxed">

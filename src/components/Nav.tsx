@@ -12,7 +12,7 @@ export default function Nav() {
         
         {/* Top bar (Always visible) */}
         <div className="flex items-center justify-between w-full md:w-auto">
-          <a href="#" className="font-mono text-lg sm:text-xl font-bold tracking-tight">
+          <a href="#" className="font-pixel text-sm sm:text-base tracking-[-1.5px] sm:tracking-[-2px] mt-1">
             hritik.online
           </a>
           
